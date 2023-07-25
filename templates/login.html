@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Sailor Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/favicon.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Sailor - v2.3.1
+  * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+<!--      <h1 class="logo"><a href="/">Performance Analysis</a></h1>-->
+      <!-- Uncomment below if you prefer to use an image logo -->
+       <a href="index.html" class="logo"><img src="static/assets/img/logo.png" alt="" class="img-fluid"></a>
+
+      <nav class="nav-menu d-none d-lg-block">
+
+        <ul>
+          <li><a href="/">Home</a></li>
+
+
+
+          <li><a href="/about">About</a></li>
+
+
+
+        </ul>
+
+      </nav>
+
+    </div>
+  </header><!-- End Header -->
+
+
+  <section id="hero" class="d-flex justify-content-center align-items-center" style="height:800px">
+    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+
+<center>
+                {% block body%}
+
+                            {% if msg =='invalid' %}
+                                 <h3 style="color:white;background:red"><i>Please provide valid credentials</i></h3>
+                                {% elif msg =='success' %}
+                                 <h3 style="color:white;background:green"><i>Login successfull</i></h3>
+
+
+                            {% endif %}
+                {% endblock %}
+    </center>
+        <center>
+
+
+                      <h3 style="color:white">Enter Login Details</h3><br>
+             </center>
+
+                       <form action="{{url_for('login')}}" method="post">
+                  <center>
+                      <table>
+
+                          <td>
+
+                                    <input type="email" placeholder="Enter Your Email" name="email"><br><br>
+<!--                                    <input type="email" name="email"placeholder="Enter Your Email"><br><br>-->
+                                    <input type="password" name="password" placeholder="Enter Your Password"><br><br>
+<!--                                    <input type="password" name="cpwd"placeholder="Confirm Password"><br><br>-->
+<!--                                    <input type="number" name="e"placeholder="Failures"><br><br>-->
+<!--                                    <input type="number" name="f"placeholder="Absences"><br><br>-->
+<!--                                    <input type="number" name="g"placeholder="Visisted Resources"><br><br>-->
+<!--                                    <input type="number" name="h"placeholder="Participated in Discussion"><br><br>-->
+<!--                                     <input type="number" name="i"placeholder="Announcements Views"><br><br>-->
+                               <input type="submit" value="submit"class="btn btn-info">
+<!--                                </optgroup>-->
+                        </select>
+                                 </td>
+                         </table>
+                      <table>
+                          <td>
+                              <br>
+
+
+                          </td>
+                          </table>
+
+                       </center>
+
+
+
+                      </form>
+
+    </div>
+  </section><!-- End Hero -->
+
+
+
+
+          <script src="static/assets/vendor/jquery/jquery.min.js"></script>
+          <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+          <script src="static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+          <script src="static/assets/vendor/php-email-form/validate.js"></script>
+          <script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+          <script src="static/assets/vendor/venobox/venobox.min.js"></script>
+          <script src="static/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+          <script src="static/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+
+  <!-- Template Main JS File -->
+          <script src="static/assets/js/main.js"></script>
+
+</body>
+
+</html>
